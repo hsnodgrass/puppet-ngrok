@@ -1,0 +1,21 @@
+{
+  "name": "gabe-ngrok",
+  "version": "0.1.0",
+  "author": "Gabriel M Schuyler",
+  "license": "Apache 2.0",
+  "summary": "Installs and configures ngrok",
+  "source": "https://github.com/gabe-sky/puppet-ngrok",
+  "project_page": "https://github.com/gabe-sky/puppet-ngrok",
+  "issues_url": "https://github.com/gabe-sky/puppet-ngrok/issues",
+  "tags": ["ngrok"],
+  "dependencies": [
+    {"name":"puppet-archive","version_requirement":">= 1.0.0"},
+    {"name":"puppet-stdlib","version_requirement":">= 4.13.1"}
+  ],
+  "operatingsystem_support": [
+    {
+      "kernel": "Linux"
+    }
+  ]
+}
+

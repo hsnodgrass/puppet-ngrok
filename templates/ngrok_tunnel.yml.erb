@@ -1,0 +1,25 @@
+  <%= @tunnel_name %>:
+<% if @proto %>    proto: <%= @proto %>
+<% end -%>
+<% if @addr %>    addr: <%= @addr %>
+<% end -%>
+<% if @inspect %>    inspect: <%= @inspect %>
+<% end -%>
+<% if @auth %>    auth: <%= @auth %>
+<% end -%>
+<% if @host_header %>    host_header: <%= @host_header %>
+<% end -%>
+<% if @bind_tls %>    bind_tls: <%= @bind_tls %>
+<% end -%>
+<% if @subdomain %>    subdomain: <%= @subdomain %>
+<% end -%>
+<% if @hostname %>    hostname: <%= @hostname %>
+<% end -%>
+<% if @crt %>    crt: <%= @crt %>
+<% end -%>
+<% if @key %>    key: <%= @key %>
+<% end -%>
+<% if @client_cas %>    client_cas: <%= @client_cas %>
+<% end -%>
+<% if @remote_addr %>    remote_addr: <%= @remote_addr %>
+<% end -%>
