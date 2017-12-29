@@ -1,8 +1,8 @@
 {
   "name": "gabe-ngrok",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Gabriel M Schuyler",
-  "license": "Apache 2.0",
+  "license": "Apache-2.0",
   "summary": "Installs and configures ngrok binary and tunnels",
   "source": "https://github.com/gabe-sky/puppet-ngrok",
   "project_page": "https://github.com/gabe-sky/puppet-ngrok",
