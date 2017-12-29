@@ -39,7 +39,7 @@ class ngrok (
   archive { '/tmp/ngrok.zip':
     source       => $download_url,
     extract      => true,
-    extract_path => "${bin_dir}",
+    extract_path => $bin_dir,
     creates      => "${bin_dir}/ngrok",
     require      => File[$bin_dir],
   }

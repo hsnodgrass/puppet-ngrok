@@ -26,7 +26,7 @@ define ngrok::tunnel (
   # Make sure there's a 'tunnels' header in the config file
   if !defined(Concat::Fragment['tunnels heading']) {
     concat::fragment { 'tunnels heading':
-      target => "${ngrok::conf_dir}/ngrok.yml",
+      target  => "${ngrok::conf_dir}/ngrok.yml",
       content => "tunnels:\n",
       order   => '50',
     }
