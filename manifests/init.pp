@@ -41,7 +41,6 @@ class ngrok (
     extract      => true,
     extract_path => $bin_dir,
     creates      => "${bin_dir}/ngrok",
-    require      => File[$bin_dir],
   }
 
   # Make the config file a concat target.
