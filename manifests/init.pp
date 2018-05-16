@@ -24,9 +24,9 @@ class ngrok (
   Optional[String] $web_addr                = undef,
 
   # Whether to manage the service, and which tunnels to start with it.
-  Boolean $service_manage                    = true,
-  String $service_state                     = 'running',
-  String $service_tunnels                   = '--all',
+  Boolean $service_manage                   = true,
+  String  $service_state                    = 'running',
+  String  $service_tunnels                  = '--all',
 
 ) {
 
@@ -45,7 +45,10 @@ class ngrok (
 
   # Make the config file a concat target.
   concat { "${conf_dir}/ngrok.yml":
-    notify => Service['ngrok'],
+    notify => $service_manage ? {
+      true  => Service['ngrok'],
+      false => undef,
+    }
   }
 
   # Throw the global options into the config file, at the top.

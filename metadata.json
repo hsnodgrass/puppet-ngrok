@@ -2,16 +2,24 @@
   "name": "gabe-ngrok",
   "version": "1.0.3",
   "author": "Gabriel M Schuyler",
-  "license": "Apache-2.0",
   "summary": "Installs and configures ngrok binary and tunnels",
+  "license": "Apache-2.0",
   "source": "https://github.com/gabe-sky/puppet-ngrok",
   "project_page": "https://github.com/gabe-sky/puppet-ngrok",
   "issues_url": "https://github.com/gabe-sky/puppet-ngrok/issues",
-  "tags": ["ngrok"],
   "dependencies": [
-    {"name":"puppet-archive","version_requirement":">= 1.0.0"},
-    {"name":"puppetlabs-concat","version_requirement":">= 4.0.0"},
-    {"name":"puppetlabs-stdlib","version_requirement":">= 4.0.0"}
+    {
+      "name": "puppet-archive",
+      "version_requirement": ">= 1.0.0"
+    },
+    {
+      "name": "puppetlabs-concat",
+      "version_requirement": ">= 4.0.0"
+    },
+    {
+      "name": "puppetlabs-stdlib",
+      "version_requirement": ">= 4.0.0"
+    }
   ],
   "operatingsystem_support": [
     {
@@ -43,6 +51,17 @@
         "16.04"
       ]
     }
-  ]
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 4.7.0 < 6.0.0"
+    }
+  ],
+  "tags": [
+    "ngrok"
+  ],
+  "pdk-version": "1.5.0",
+  "template-url": "file:///opt/puppetlabs/pdk/share/cache/pdk-templates.git",
+  "template-ref": "1.5.0-0-gd1b3eca"
 }
-
