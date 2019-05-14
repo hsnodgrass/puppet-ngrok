@@ -10,7 +10,7 @@ Class and defined type parameters match the ones you'll find in the config file,
 Once ngrok is running, you can verify which tunnels are running with a `curl` command.
 
 ```
-curl -k http://localhost:4040/api/tunnels
+curl http://localhost:4040/api/tunnels
 ```
 
 
