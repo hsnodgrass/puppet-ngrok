@@ -45,10 +45,7 @@ class ngrok (
 
   # Make the config file a concat target.
   concat { "${conf_dir}/ngrok.yml":
-    notify => $service_manage ? {
-      true  => Service['ngrok'],
-      false => undef,
-    }
+    ensure => present,
   }
 
   # Throw the global options into the config file, at the top.
@@ -66,6 +63,8 @@ class ngrok (
       hasstatus => false,
       start     => "nohup ${bin_dir}/ngrok start ${service_tunnels} -config ${conf_dir}/ngrok.yml &",
       pattern   => 'ngrok',
+      require   => Archive['/tmp/ngrok.zip'],
+      subscribe => Concat["${conf_dir}/ngrok.yml"],
     }
   }
 
