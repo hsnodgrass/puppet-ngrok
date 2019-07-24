@@ -121,6 +121,13 @@ The ngrok class also exposes parameters for each possible main configuration opt
 This type adds tunnel stanzas to the main ngrok configuration file.  All of the attributes that it can accept match the names of options that a tunnel's yaml can contain.  For a list of these, with descriptions, see the main ngrok.com documentation page at:  https://ngrok.com/docs#tunnel-definitions
 
 
+## Facts
+
+### `ngrok`
+
+This fact lists the active tunnels, as reported by the API.
+
+
 # Limitations
 
 This module doesn't try to save you from invalid configurations.  For instance, it's possible to omit your auth token, and then try to run some tcp tunnels, which fail without an auth token.  Puppet does not know about this situation, and will quietly try to start the service on every run.
