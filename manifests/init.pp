@@ -35,6 +35,11 @@ class ngrok (
     fail("The ngrok module does not yet work on ${::operatingsystem}")
   }
 
+  # puppet-ngrok requires the package unzip
+  package { 'unzip':
+    ensure => installed,
+  }
+
   # Download the package and uncompress it into a bin directory.
   archive { '/tmp/ngrok.zip':
     source       => $download_url,
