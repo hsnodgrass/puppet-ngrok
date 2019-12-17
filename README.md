@@ -109,6 +109,10 @@ If we're managing the service, what state should it be in.  Default: `running`
 
 When activating the service, this string is tacked on to the command, to instruct ngrok which tunnels to automatically enable at that time.  The default is '-all'.  Note that if you don't declare any `ngrok::tunnel` resources, you will need to set this to '--none' as ngrok will error out if there are no tunnels defined and you say '--all'.  It can also take a space-separated list of tunnel names to start.  Remember, you will need an auth token (login to ngrok.com to see it) if you want to run tcp tunnels.
 
+#### `manage_unzip`
+
+This module depends on `puppet-archive`, which defaults to using the `unzip` package for extraction. On a good number of linux distros, specifically CentOS 7 minimal, `unzip` is not installed by default. Setting this parameter to `true` will ensure that the module manages the installation of the `unzip` package.
+
 #### Other paramters
 
 The ngrok class also exposes parameters for each possible main configuration options.  A detailed list of those options is available on the ngrok.com site itself at:  https://ngrok.com/docs#config-options
